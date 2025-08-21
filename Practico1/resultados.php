@@ -3,7 +3,7 @@
 
 /* Calculo de baskara */
 
-if ($_POST['Envio']) {
+if ($_POST['bhaskara']) {
 $datoa = (int)$_POST['numA'];
 $datob = (int)$_POST['numB'];
 $datoc = (int)$_POST['numC'];
@@ -32,6 +32,8 @@ function diviMultiplicacion($datoa) {
 function division($dato1, $dato2) {
     return $dato1 / $dato2;
 }
+
+
 
 require("ingreso_formulario.php")
 

@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+ 
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Navbar */
+nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li h1 {
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav li h1:hover {
+  color: #ff9800;
+}
+
+/* Estructura principal */
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Secciones */
+section {
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+section h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: .5rem;
+}
+
+/* Formularios */
+form {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin: .5rem 0;
+}
+
+input[type="number"] {
+  padding: .4rem;
+  margin-left: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  margin-top: .5rem;
+  margin-right: .5rem;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+  background: #ff9800;
+}
