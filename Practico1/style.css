@@ -92,3 +92,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #ff9800;
 }
+
+/* Cambiarle despues el estilo al resultado */
+.resultado {
+  background-color: aqua;
+}

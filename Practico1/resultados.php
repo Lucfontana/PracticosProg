@@ -1,5 +1,16 @@
 <?php
+// I
+// M
+// P
+// O
+// R
+// T
+// A
+// N
+// T
+// E
 
+// CORREGIR: NO SE PUEDE DIVIDIR POR CERO PQ TIRA ERROR
 
 /* Calculo de baskara */
 

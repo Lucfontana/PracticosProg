@@ -55,7 +55,7 @@
                 </label>
             </form>
 
-            <form action="resultado.php" method="post">
+            <form action="paso2.php" method="post">
                 <h1>Cálculo área triángulo</h1>
                 <label for="base">Medida de la base: 
                     <input type="number" name="num1" placeholder="Ingrese medida de la base">
@@ -66,12 +66,12 @@
                 <input type="submit" value="Enviar" name="enviarTriangulo">
             </form>
 
-            <form action="resultado.php" method="post">
+            <form action="paso2.php" method="post">
                 <h1>Cálculo Circunferencia</h1>
                 <label for="radio">Medida del radio: 
-                    <input type="number" name="num1" placeholder="Ingrese medida del lado">
+                    <input type="number" name="num1" placeholder="Ingrese medida de la circunferencia">
                 </label>
-                <input type="submit" value="Enviar" name="enviarRectangulo">
+                <input type="submit" value="Enviar" name="enviarCircunferencia">
                 </label>
             </form>
             
@@ -82,13 +82,13 @@
             <form action="resultados.php" method="post">
                 <h1>Cálculo de Baskara</h1>
                 <label for="lado">Numero A: 
-                    <input type="number" name="numA" placeholder="Ingrese el numero de exponente 2: ">
+                    <input type="number" name="numA" placeholder="Ingrese el numero de exponente 2: " required>
                 </label>
                 <label for="lado">Numero B: 
-                    <input type="number" name="numB" placeholder="Ingrese el numero de exponente 1: ">
+                    <input type="number" name="numB" placeholder="Ingrese el numero de exponente 1: " required>
                 </label>
                 <label for="lado">Numero C: 
-                    <input type="number" name="numC" placeholder="Ingrese el termino independiente: ">
+                    <input type="number" name="numC" placeholder="Ingrese el termino independiente: " required>
                 </label>
                 <input type="submit" value="Enviar" name="bhaskara">
                 <div id="result">
