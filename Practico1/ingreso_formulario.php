@@ -18,7 +18,7 @@
     
     <main>
         <section id="calculos-sencillos">
-            <form action="resultado.php" method="post">
+            <form action="calcSimple.php" method="post">
                 <h1>Calculos Sencillos</h1>
                 <label for="num1">Número 1: 
                     <input type="number" name="num1" placeholder="Ingrese un número">
@@ -26,10 +26,17 @@
                 <label for="num2">Número 2: 
                     <input type="number" name="num2" placeholder="Ingrese un número">
                 </label>
-                <input type="submit" value="Sumar" name="sumar">
-                <input type="submit" value="Restar" name="restar">
-                <input type="submit" value="Multiplicar" name="multiplicar">
-                <input type="submit" value="Dividir" name="dividir">
+                <label for="operador">Operador
+                    <select name="operador" id="" placeholder="Ingrese un operador">
+                        <option value="">Ingrese un operador</option>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="x">x</option>
+                        <option value="/">/</option>
+                    </select>
+                </label>
+                <input type="submit" value="Calcular" name="calculoBasico">
+
             </form>
         </section>
 
