@@ -41,7 +41,7 @@
 
             </form>
             <?php if (isset($resultado)): ?>
-                <div class="resultado">Resultado: <?= $resultado ?></div>
+                <div class="resultado">Resultado de la operacion: <?= $resultado ?></div>
             <?php endif; ?>
 
         </section>
@@ -54,6 +54,9 @@
                     <input type="number" name="num1" placeholder="Ingrese medida del lado">
                 </label>
                 <input type="submit" value="Enviar" name="enviarCuadrado">
+            <?php if (isset($areaCuad)): ?>
+                <div class="resultado">Resultado: <?= $areaCuad ?></div>
+            <?php endif; ?>
             </form>
 
             <form action="paso2.php" method="post">
@@ -66,6 +69,9 @@
                 </label>
                 <input type="submit" value="Enviar" name="enviarRectangulo">
                 </label>
+                <?php if (isset($areaR)): ?>
+                    <div class="resultado">Resultado: <?= $areaR ?></div>
+                <?php endif; ?>
             </form>
 
             <form action="paso2.php" method="post">
@@ -77,6 +83,9 @@
                     <input type="number" name="num2" placeholder="Ingrese medida de la altura">
                 </label>
                 <input type="submit" value="Enviar" name="enviarTriangulo">
+                <?php if (isset($areaT)): ?>
+                    <div class="resultado">Resultado: <?= $areaT ?></div>
+                <?php endif; ?>
             </form>
 
             <form action="paso2.php" method="post">
@@ -86,6 +95,9 @@
                 </label>
                 <input type="submit" value="Enviar" name="enviarCircunferencia">
                 </label>
+                <?php if (isset($areaCir)): ?>
+                    <div class="resultado">Resultado: <?= $areaCir ?></div>
+                <?php endif; ?>
             </form>
 
 
@@ -104,9 +116,9 @@
                     <input type="number" name="numC" placeholder="Ingrese el termino independiente: " required>
                 </label>
                 <input type="submit" value="Enviar" name="bhaskara">
-                <div id="result">
-
-                </div>
+                <?php if (isset($datofinal)): ?>
+                    <div class="resultado">Resultado: <?= $datofinal ?></div>
+                <?php endif; ?>
             </form>
         </section>
         <main>

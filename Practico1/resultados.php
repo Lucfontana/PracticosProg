@@ -11,8 +11,11 @@
 // E
 
 // CORREGIR: NO SE PUEDE DIVIDIR POR CERO PQ TIRA ERROR
+// CORREGIR: HACER QUE DEVUELVA RESULTADO CUANDO NO HAYA RAIZ DE NUMERO NEGAIVO
 
 /* Calculo de baskara */
+
+$datofinal = null;
 
 if ($_POST['bhaskara']) {
 $datoa = (int)$_POST['numA'];
@@ -21,14 +24,13 @@ $datoc = (int)$_POST['numC'];
 
 
 if (multiplicacion($datoa, $datob, $datoc) < 0) {
-    echo "Error; no hay raiz de numero negativo";
-    return;
+    $datofinal = "Error; no hay raiz de numero negativo";
+    
 }
 
 $datoRaiz = sqrt(division(multiplicacion($datoa, $datob, $datoc), diviMultiplicacion($datoa)));
-$datofinal = 4 + $datoRaiz;
 
-echo "El resultado es: ".$datofinal;
+$datofinal = 4 + $datoRaiz;
 
 }
 
