@@ -1,11 +1,13 @@
 <?php
 
+$resultado = null;
+
 if(isset($_POST['calculoBasico'])){
     $num1 = (int)$_POST['num1'];
     $num2 = (int)$_POST['num2'];
     $operador = (string)$_POST['operador'];
 
-    echo '<div class="resultado">' . calculo($num1, $num2, $operador) . '</div>';
+    $resultado = calculo($num1, $num2, $operador);
 }
 
 function calculo($num1, $num2, $operador){
