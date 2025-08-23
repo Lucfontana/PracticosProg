@@ -10,7 +10,6 @@
 // T
 // E
 
-// CORREGIR: NO SE PUEDE DIVIDIR POR CERO PQ TIRA ERROR
 // CORREGIR: HACER QUE DEVUELVA RESULTADO CUANDO NO HAYA RAIZ DE NUMERO NEGAIVO
 
 /* Calculo de baskara */
@@ -22,16 +21,22 @@ $datoa = (int)$_POST['numA'];
 $datob = (int)$_POST['numB'];
 $datoc = (int)$_POST['numC'];
 
-
-if (multiplicacion($datoa, $datob, $datoc) < 0) {
-    $datofinal = "Error; no hay raiz de numero negativo";
+    if ($datoa == 0) {
+        $mensajeA = "Error; no es una ecuación cuadratica ya que a = 0";
+        $mensajeB = "";
+    } else if (multiplicacion($datoa, $datob, $datoc) < 0) {
+        $mensajeA = "Error; No hay raiz de numero negativo";
+        $mensajeB = "";
+    } else {
+        $datoRaiz = sqrt(multiplicacion($datoa, $datob, $datoc));
+        $datofinalA = division(diviSuma($datob, $datoRaiz), diviMultiplicacion($datoa));
+        $datofinalB = division(diviResta($datob, $datoRaiz), diviMultiplicacion($datoa));
+        $mensajeA = "Resultado primera x: ".$datofinalA;
+        $mensajeB = "Resultado segunda x: ".$datofinalB;
+    }
     
-}
 
-$datoRaiz = sqrt(division(multiplicacion($datoa, $datob, $datoc), diviMultiplicacion($datoa)));
-
-$datofinal = 4 + $datoRaiz;
-
+    
 }
 
 function multiplicacion($datoa, $datob, $datoc) {
@@ -40,6 +45,14 @@ function multiplicacion($datoa, $datob, $datoc) {
 
 function diviMultiplicacion($datoa) {
     return ($datoa * 2);
+}
+
+function diviSuma($datob, $datoRaiz) {
+  return ((-$datob) + $datoRaiz);
+}
+
+function diviResta($datob, $datoRaiz) {
+  return ((-$datob) - $datoRaiz);
 }
 
 function division($dato1, $dato2) {

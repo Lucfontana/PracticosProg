@@ -95,5 +95,6 @@ input[type="submit"]:hover {
 
 /* Cambiarle despues el estilo al resultado */
 .resultado {
-  background-color: aqua;
+  padding-top: 15px;
+  font-size: 18px;
 }

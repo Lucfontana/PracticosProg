@@ -116,8 +116,9 @@
                     <input type="number" name="numC" placeholder="Ingrese el termino independiente: " required>
                 </label>
                 <input type="submit" value="Enviar" name="bhaskara">
-                <?php if (isset($datofinal)): ?>
-                    <div class="resultado">Resultado: <?= $datofinal ?></div>
+                <?php if (isset($mensajeA) || isset($mensajeB)): ?>
+                    <div class="resultado"> <?= $mensajeA ?></div>
+                    <div class="resultado"> <?= $mensajeB ?></div>
                 <?php endif; ?>
             </form>
         </section>
