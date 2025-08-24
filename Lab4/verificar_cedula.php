@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 //Las variables en null son para que no se muestren, ya que
 //una vez su valor sea asignado, van a ser visibles en "ingreso_datos.php"

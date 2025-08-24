@@ -14,7 +14,8 @@
 
 /* Calculo de baskara */
 
-$datofinal = null;
+$mensajeA = null;
+$mensajeB = null;
 
 if ($_POST['bhaskara']) {
 $datoa = (int)$_POST['numA'];
@@ -23,10 +24,8 @@ $datoc = (int)$_POST['numC'];
 
     if ($datoa == 0) {
         $mensajeA = "Error; no es una ecuación cuadratica ya que a = 0";
-        $mensajeB = "";
     } else if (multiplicacion($datoa, $datob, $datoc) < 0) {
         $mensajeA = "Error; No hay raiz de numero negativo";
-        $mensajeB = "";
     } else {
         $datoRaiz = sqrt(multiplicacion($datoa, $datob, $datoc));
         $datofinalA = division(diviSuma($datob, $datoRaiz), diviMultiplicacion($datoa));
@@ -34,9 +33,6 @@ $datoc = (int)$_POST['numC'];
         $mensajeA = "Resultado primera x: ".$datofinalA;
         $mensajeB = "Resultado segunda x: ".$datofinalB;
     }
-    
-
-    
 }
 
 function multiplicacion($datoa, $datob, $datoc) {
