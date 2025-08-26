@@ -2,32 +2,42 @@
 
 $conversion = null;
 
+//Si el formulario 'convertir' se envia, se ejecuta lo de adentro
 if (isset(($_POST['convertir']))) {
-//https://www.w3schools.com/php/php_regex.asp
-//Hacer un regex para los hexadecimales (y pasarlos a string)
-// Pasar a int cualquiera de los otros valores, 
-$valor = $_POST['num'];
-$desde = (int)$_POST['desde'];
-$destino = (int)$_POST['destino'];
 
-$conversion = base_convert($valor, $desde, $destino);
+//Trae los valores desde el formulario cuando se envia
+$numeroAConvertir = $_POST['num'];
+$baseOrigen = (int)$_POST['desde'];
+$baseDestino = (int)$_POST['destino'];
 
+//Si el correctInput devuelve true (lo que significaria que el input tiene informacion adecuada) se realiza la conversion
+if (correctInput($baseOrigen, $numeroAConvertir)){
+    $conversion = base_convert($numeroAConvertir, $baseOrigen, $baseDestino);
+} else {
+    //En el otro caso, se muestra que se eligio la base incorrecta
+    $conversion = "No se puede convertir tu numero, base de origen elegida incorrecta";
+}
+
+//Se carga todo en el index
 require("index.php");
 }
 
-function transformer($desde){
-    if ($desde != 16 && $desde != ''){
-        return $desde = (int)$desde;
-    } else {
-        return $desde;
-    }
+//https://www.w3schools.com/php/php_regex.asp
+//Verifica si los inputs tienen informacion correspondiente a la base seleccionada 
 
-    if ($desde == 2){
-        //hacer el redex para verificar que solo tenga 0 o 1
-    }
-    else if ($desde == 8){
-        //hacer el redex para verificar que NO tenga 8 o 9
-    } 
+function correctInput($baseOrigen, $numeroAConvertir){
+    //(^) busca baseOrigen el INICIO del string
+    //($) indica que busque hasta el FINAL del string
+    //(+) tiene que haber al menos una coincidencia (tambien verifica que el input no este vacio)
+
+    $patronBinario = "/^[01]+$/"; //Verifica si tiene solamente 0 o 1
+    $patronOctal = "/^[0-7]+$/"; // Verifica que no se utilice ni el 8 ni el 9
+    $patronDecimal = "/^[0-9]+$/"; //Verifica si tiene solamente numeros en general 
+    $patronHexa = "/^[0-9a-f]+$/i"; //busca que tenga numeros al 0-9 y letras de la a-f
+    if ($baseOrigen == 2) return preg_match($patronBinario, $numeroAConvertir);
+    if ($baseOrigen == 8) return preg_match($patronOctal, $numeroAConvertir);
+    if ($baseOrigen == 10) return preg_match($patronDecimal, $numeroAConvertir);
+    if ($baseOrigen == 16) return preg_match($patronHexa, $numeroAConvertir);
 }
 
 ?>

@@ -48,7 +48,7 @@
 
             </form>
             <?php if (isset($conversion)): ?>
-                <div class="resultado">CI: <?= $conversion ?></div>
+                <div class="resultado">Resultado: <?= $conversion ?></div>
             <?php endif; ?>
 
         </section>
