@@ -10,7 +10,7 @@ $resultado8 = null;
 $resultado9 = null;
 $resultado10 = null;
 //
-$porcentaje = null;
+$OroPorcentajePorcentaje = null;
 //
 $factorial = null;
 
@@ -40,6 +40,7 @@ if (isset($_POST['numeroTabla'])) {
         $OroPorcentaje = "Error; no puedes ingresar numeros negativos";
     } else {
         $OroPorcentaje = "Tus posibilidades son de ".Posibilidades($oro)." entre ".Porcentaje()."<br>";
+        $OroPorcentajePorcentaje = "Lo que es igual a: ".PorcentajePorcentaje($oro)."%";
     }
 } else if (isset($_POST['factorial'])) {
     $numeroFactorial = (int) $_POST['numeroFactorial'];
@@ -63,6 +64,10 @@ function Posibilidades($oro) {
 
 function Porcentaje() {
     return (48*47*46*45*44)/120;
+}
+
+function PorcentajePorcentaje($oro) {
+    return (posibilidades($oro)/Porcentaje())*100;
 }
 
 // Funciones de Factorial
