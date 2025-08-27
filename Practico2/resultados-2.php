@@ -33,8 +33,14 @@ if (isset($_POST['numeroTabla'])) {
     }
 
 } else if (isset($_POST['adivina5oro'])) {
-    $OroPorcentaje = "Tus posibilidades son de ".Posibilidades()." entre ".Porcentaje()."<br>";
-    $OroAnual = "Lo que significa que al año tienes una posibilidad de ".Posibilidades()." entre ".Porcentaje()/52;
+    $oro = (int) $_POST['5oro'];
+    if ($oro > Porcentaje()) {
+        $OroPorcentaje = "Error; Demasiadas veces jugadas";
+    } else if ($oro < 1) {
+        $OroPorcentaje = "Error; no puedes ingresar numeros negativos";
+    } else {
+        $OroPorcentaje = "Tus posibilidades son de ".Posibilidades($oro)." entre ".Porcentaje()."<br>";
+    }
 } else if (isset($_POST['factorial'])) {
     $numeroFactorial = (int) $_POST['numeroFactorial'];
     if ($numeroFactorial < 1) {
@@ -51,8 +57,8 @@ function tablas($numerodeTabla) {
 
 
 // Funciones de 5 de oro
-function Posibilidades() {
-    return (5*4*3*2*1)/120;
+function Posibilidades($oro) {
+    return ((5*4*3*2*1)/120)*$oro;
 }
 
 function Porcentaje() {

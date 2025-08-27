@@ -49,13 +49,13 @@
         <section id="5oro">
             <form action="resultados-2.php" method="post">
                 <h1>El secreto detras de las probabilidades del 5 de oro</h1>
-                <label for="lado">Adivina cuanto es tu probabilidad del 5 de oro aquí
+                <label for="5oro">Adivina cuanto es tu probabilidad del 5 de oro aquí
+                    <input type="number" name="5oro" placeholder="Ingrese el número de veces jugadas" required>
                 </label>
                 <input type="submit" value="Calcular" name="adivina5oro">
             <?php if (isset($OroPorcentaje)): ?>
                 <div class="resultado">
                     <?= $OroPorcentaje ?>
-                    <?= $OroAnual ?>
                 </div>
             <?php endif; ?>
             </form>
