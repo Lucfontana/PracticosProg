@@ -46,7 +46,9 @@ if (isset($_POST['numeroTabla'])) {
     $numeroFactorial = (int) $_POST['numeroFactorial'];
     if ($numeroFactorial < 1) {
         $factorial = "Error; El número ingresado debe ser positivo";
-    } else {   
+    } else if ($numeroFactorial > 50) {   
+        $factorial = "Error; El número no puede superar el 50";
+    } else {
         $factorial = "Resultado: ".CalculoFactorial($numeroFactorial);
     }
 }
