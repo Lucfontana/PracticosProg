@@ -26,7 +26,7 @@
                 </label>
                 <label for="desde">Base de origen:
                     <select name="desde" id="desde">
-                        <option value="none"></option>
+                        <option value=""></option>
                         <option value="10">Decimal</option>
                         <option value="2">Binario</option>
                         <option value="8">Octal</option>
@@ -36,7 +36,7 @@
 
                 <label for="destino">Base de destino:
                     <select name="destino" id="destino">
-                        <option value="none"></option>
+                        <option value=""></option>
                         <option value="10">Decimal</option>
                         <option value="2">Binario</option>
                         <option value="8">Octal</option>
@@ -57,12 +57,45 @@
         <section id="calculo-diversos">
             <form action="conversiones_datos.php" method="post">
                 <h1>Operaciones con resultados en distintas bases</h1>
-                <label for="lado">Ingrese los primeros 7 dígitos de una CI:
-                    <input type="number" name="ci7" placeholder="Ingrese CI sin digito verificador" maxlength="7" required>
+                <label for="num1">Ingrese el primer numero:
+                    <input type="number" name="num1" placeholder="Ingrese el primer numero" maxlength="7" required>
                 </label>
-                <input type="submit" value="Enviar" name="generarDV">
+                <label for="base1">Base:
+                    <select name="base1" id="base1">
+                        <option value=""></option>
+                        <option value="10">Decimal</option>
+                        <option value="2">Binario</option>
+                        <option value="8">Octal</option>
+                        <option value="16">Hexadecimal</option>
+                    </select>
+                </label>
+                <label for="num2">Ingrese el segundo numero:
+                    <input type="number" name="num2" placeholder="Ingrese el segundo numero" maxlength="7" required>
+                </label>
+                <label for="base2">Base:
+                    <select name="base2" id="base2">
+                        <option value=""></option>
+                        <option value="10">Decimal</option>
+                        <option value="2">Binario</option>
+                        <option value="8">Octal</option>
+                        <option value="16">Hexadecimal</option>
+                    </select>
+                </label>
+                <label for="operacion">Operación:
+                    <select name="operacion" id="operacion">
+                        <option value=""></option>
+                        <option>+</option>
+                        <option>-</option>
+                        <option>/</option>
+                        <option>*</option>
+                    </select>
+                </label>
+                <input type="submit" value="Enviar" name="Calcular">
             <?php if (isset($digVerificador)): ?>
-                <div class="resultado">Resultado: <?= $digVerificador ?></div>
+                <div class="resultado">Resultado Decimal: <?= $resultado ?></div>
+                <div class="resultado">Resultado Binario: <?= $resultado2 ?></div>
+                <div class="resultado">Resultado Octal: <?= $resultado3 ?></div>
+                <div class="resultado">Resultado Hexadecimal: <?= $resultado4 ?></div>
             <?php endif; ?>
             </form>
 
