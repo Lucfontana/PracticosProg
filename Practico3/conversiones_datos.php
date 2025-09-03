@@ -52,7 +52,7 @@ if (isset(($_POST['Calcular']))) {
 
         if (is_int(Calculadora($num1_convertido, $num2_convertido, $operacion))) {
             $num_convertir = Calculadora($num1_convertido, $num2_convertido, $operacion);
-            $resultado = "Resultado Decimal".$num_convertir;
+            $resultado = "Resultado Decimal: ".$num_convertir;
             $resultado2 = "Reultado Binario: ".base_convert($num_convertir, 10, 2);
             $resultado3 = "Reultado Octal: ".base_convert($num_convertir, 10, 8);
             $resultado4 = "Reultado Hexadecimal: ".base_convert($num_convertir, 10, 16);
