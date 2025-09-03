@@ -16,6 +16,7 @@
         </ul>
     </nav>
 
+     <a href="/lab6/index.html" class="back-btn">⬅ Volver al inicio</a>
 
     <main>
         <section id="conversiones">
@@ -102,7 +103,11 @@
         </section>
 
 
-        <main>
+            </main>
 </body>
+
+ <footer>
+        <p>© Laboratorios de Programación</p>
+    </footer>
 
 </html>
