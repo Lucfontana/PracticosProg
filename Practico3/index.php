@@ -61,7 +61,7 @@
                     <input type="number" name="num1" placeholder="Ingrese el primer numero" maxlength="7" required>
                 </label>
                 <label for="base1">Base:
-                    <select name="base1" id="base1">
+                    <select name="base1" id="base1" required>
                         <option value=""></option>
                         <option value="10">Decimal</option>
                         <option value="2">Binario</option>
@@ -90,12 +90,13 @@
                         <option>*</option>
                     </select>
                 </label>
-                <input type="submit" value="Enviar" name="Calcular">
-            <?php if (isset($digVerificador)): ?>
-                <div class="resultado">Resultado Decimal: <?= $resultado ?></div>
-                <div class="resultado">Resultado Binario: <?= $resultado2 ?></div>
-                <div class="resultado">Resultado Octal: <?= $resultado3 ?></div>
-                <div class="resultado">Resultado Hexadecimal: <?= $resultado4 ?></div>
+                <input type="hidden" name="Calcular" value=1>
+                <input type="submit" value="Enviar">
+            <?php if (isset($resultado)): ?>
+                <div class="resultado"><?= $resultado ?></div>
+                <div class="resultado"><?= $resultado2 ?></div>
+                <div class="resultado"><?= $resultado3 ?></div>
+                <div class="resultado"><?= $resultado4 ?></div>
             <?php endif; ?>
             </form>
 

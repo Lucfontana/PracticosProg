@@ -33,16 +33,16 @@ if (isset(($_POST['convertir']))) {
 }
 
 if (isset(($_POST['Calcular']))) {
-    $num1 = $_POST['num1'];
-    $num2 = $_POST['num2'];
+    $num1 = (int)$_POST['num1'];
+    $num2 = (int)$_POST['num2'];
     $base1 = (int)$_POST['base1'];
     $base2 = (int)$_POST['base2'];
     $operacion = $_POST['operacion'];
     $base_convertir = 10;
 
-    if ($base1 == null || $base2 == null) {
+    if ($base1 === null || $base2 === null) {
         $resultado = "Ingresa una base para el primer numero y una base para el segundo";
-    } else if ($num1->is_float() || $num2->is_float()) {
+    } else if (is_float($num1) || is_float($num2)) {
         $resultado = "No puedes ingresar numeros con coma";
     } else if ($operacion == null) {
         $resultado = "Ingresa una operacion";
@@ -50,16 +50,17 @@ if (isset(($_POST['Calcular']))) {
         $num1_convertido = base_convert($num1, $base1, $base_convertir);
         $num2_convertido = base_convert($num2, $base2, $base_convertir);
 
-        if (Calculadora($num1_convertido, $num2_convertido, $operacion)->is_int()) {
+        if (is_int(Calculadora($num1_convertido, $num2_convertido, $operacion))) {
             $num_convertir = Calculadora($num1_convertido, $num2_convertido, $operacion);
-            $resultado = $num_convertir;
-            $resultado2 = base_convert($num_convertir, 10, 2);
-            $resultado3 = base_convert($num_convertir, 10, 8);
-            $resultado4 = base_convert($num_convertir, 10, 16);
+            $resultado = "Resultado Decimal".$num_convertir;
+            $resultado2 = "Reultado Binario: ".base_convert($num_convertir, 10, 2);
+            $resultado3 = "Reultado Octal: ".base_convert($num_convertir, 10, 8);
+            $resultado4 = "Reultado Hexadecimal: ".base_convert($num_convertir, 10, 16);
         } else {
             $resultado = "El resultado de la opercion es un numero con coma y no se puede cambiar de base";
         }
     }
+    require("index.php");
 }
 
 
@@ -72,7 +73,7 @@ function Calculadora($num1_convertido, $num2_convertido, $operacion)
             return $num1_convertido + $num2_convertido;
         case '-':
             return $num1_convertido - $num2_convertido;
-        case 'x':
+        case '*':
             return $num1_convertido * $num2_convertido;
         case '/':
             if ($num2_convertido != 0 && $num1_convertido != 0) {
