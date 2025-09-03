@@ -44,10 +44,38 @@
         <section id="calculo-promedio">
             <h1>Calificaciones</h1>
             <form action="calculo_promedio.php" method="post">
-                <?php for ($i=1; $i<=10; $i++): ?>
-        <input type="number" name="nota<?php echo $i; ?>" class="nota<?php echo $i?>" placeholder="Nota <?php echo $i; ?>" min="0" max="10" required>
-    <?php endfor; ?>
-                <button type="submit">Calcular Promedio</button>
+                <label for="num">Matemáticas:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>   
+                <label for="num">Filosofía:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Ciberseguridad:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Inglés:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Programación:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Ingeniería:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Sistemas Operativos:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Sociología:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Profundización:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+                <label for="num">Cálculo:
+                    <input type="number" name="num" placeholder="Nota" min="1" max="10" required>
+                </label>
+
+                <button type="submit" value="Calcular Promedio" name="calcularpromedio">Calcular Promedio</button>
             </form>
         </section>
     </main>
