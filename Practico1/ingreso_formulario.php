@@ -42,7 +42,7 @@
 
             </form>
             <?php if (isset($resultado)): ?>
-                <div class="resultado">Resultado de la operacion: <?= $resultado ?></div>
+                <div class="resultado"> <?= $resultado ?></div>
             <?php endif; ?>
 
         </section>
