@@ -96,6 +96,7 @@ function correctInput($baseOrigen, $numeroAConvertir)
     $patronOctal = "/^[0-7]+$/"; // Verifica que no se utilice ni el 8 ni el 9
     $patronDecimal = "/^[0-9]+$/"; //Verifica si tiene solamente numeros en general 
     $patronHexa = "/^[0-9a-f]+$/i"; //busca que tenga numeros al 0-9 y letras de la a-f
+    // En estos if se examina el valor de la base ingresada, para despues retornar un valor booleano en el que se examina si el numero a convertir coincide con el patron correspondiente
     if ($baseOrigen == 2) return preg_match($patronBinario, $numeroAConvertir);
     if ($baseOrigen == 8) return preg_match($patronOctal, $numeroAConvertir);
     if ($baseOrigen == 10) return preg_match($patronDecimal, $numeroAConvertir);
