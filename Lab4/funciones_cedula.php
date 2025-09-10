@@ -1,9 +1,5 @@
 <?php
-//Las variables en null son para que no se muestren, ya que
-//una vez su valor sea asignado, van a ser visibles en "ingreso_datos.php"
-$verificadorCI = null;
-$digVerificador = null;
-$multipliEach = [2, 9, 8, 7, 6, 3, 4]; //Números por los quese multiplica la CI ingresada (el temita de la formula)
+
 
 //Función que es llamada cuando se aprieta 'verificarCI', esta función
 //llama a la de mostrarDigVerificador para compararla con el octavo número de la CI
@@ -11,7 +7,10 @@ function verifCI($CI, $multiEach)
 {
     $digitoVerif = 0;
     $arrayCI = str_split($CI); //Se divide la CI en numeros independientes y se guarda en un arreglo
-    if (strlen($CI) != 8) {
+
+    if ($arrayCI[0] === "0"){
+        return "Su CI no puede comenzar con un 0";
+    } else if (strlen($CI) != 8) {
         return 'La CI ingresada debe ser de 8 carácteres';
     } else {
         $digitoVerif = mostrarDigVerificador($CI, $multiEach);
@@ -27,7 +26,12 @@ function verifCI($CI, $multiEach)
 //Verifica que se ingresen solo 7 caracteres en el input y llama a la función de mostrarDigVerificador
 function crearDigitoVerif($CI, $multiEach)
 {
-    if (strlen($CI) != 7) {
+    //Se verifica que el usuario no haya ingresado un numero que empiece con cero
+    $arrayCI = str_split($CI);
+    if ($arrayCI[0] === "0"){
+        return "Su CI no puede comenzar con un 0";
+    }
+    else if (strlen($CI) != 7) {
         return 'Por favor, ingrese una CI de 7 carácteres';
     } else {
         return 'Tu digito verificador es: ' . mostrarDigVerificador($CI, $multiEach);
