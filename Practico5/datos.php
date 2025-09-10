@@ -16,7 +16,7 @@ function obtenerSituacion($promedio) {
         return "Examen Febrero";
     }
 }
-
+ 
 
 
 // Procesar los datos

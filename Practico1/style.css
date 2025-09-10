@@ -96,7 +96,7 @@ label {
   margin: .5rem 0;
 }
 
-input[type="number"], select {
+input[type="number"], select, input {
   padding: .4rem;
   margin-left: .5rem;
   border: 1px solid #ccc;
