@@ -25,7 +25,7 @@
                     <input type="text" placeholder="Nombre Completo" name="nombre" maxlength="50" required>
                 </label>
                 <label>Cédula de Identidad:
-                    <input type="text" placeholder="Cédula de Identidad" name="cedula" maxlength="8" required>
+                    <input type="number" placeholder="Cédula de Identidad" name="cedula" maxlength="8" required>
                 </label>
                 <label>Localidad:
                     <input type="text" placeholder="Localidad" name="localidad" maxlength="50" required>
@@ -34,7 +34,7 @@
                     <input type="text" placeholder="Dirección" name="direccion" maxlength="100" required>
                 </label>
                 <label>Teléfono:
-                    <input type="text" placeholder="Teléfono" name="telefono" maxlength="12" required>
+                    <input type="number" placeholder="Teléfono" name="telefono" maxlength="12" required>
                 </label>
                 <label>Email:
                     <input type="email" placeholder="Email" name="email" maxlength="50" required>

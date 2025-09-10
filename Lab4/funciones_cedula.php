@@ -1,6 +1,8 @@
 <?php
 
-
+$verificadorCI = null;
+$digVerificador = null;
+$multipliEach = [2,9,8,7,6,3,4];
 //Función que es llamada cuando se aprieta 'verificarCI', esta función
 //llama a la de mostrarDigVerificador para compararla con el octavo número de la CI
 function verifCI($CI, $multiEach)
