@@ -16,7 +16,7 @@
         </ul>
     </nav>
 
-
+    <a href="/lab6/index.html" class="back-btn">⬅ Volver al inicio</a>
     <main>
         <section id="InfoPersonal">
             <form action="datos.php" method="post">
