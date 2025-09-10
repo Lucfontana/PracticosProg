@@ -1,4 +1,5 @@
 <?php 
+// Se establecen como null para en caso de devolver un error solo se muestre el mensaje de error.
 $resultado1 = null;
 $resultado2 = null;
 $resultado3 = null;

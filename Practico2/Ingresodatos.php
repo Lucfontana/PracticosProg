@@ -58,7 +58,7 @@
                 <div class="resultado">
                     <?= $OroPorcentaje ?>
                     <?= $OroPorcentajePorcentaje ?>
-
+ 
                 </div>
             <?php endif; ?>
             </form>

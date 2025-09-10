@@ -12,7 +12,7 @@ $datob = (int)$_POST['numB'];
 $datoc = (int)$_POST['numC'];
 
     if ($datoa == 0) {
-        $mensajeA = "Error; no es una ecuación de segundo grado a ya que a = 0";
+        $mensajeA = "Error; no es una ecuación de segundo grado ya que a = 0";
     } else if (multiplicacion($datoa, $datob, $datoc) < 0) {
         $mensajeA = "Error; No hay raiz de numero negativo";
     } else {
