@@ -9,11 +9,11 @@ $multipliEach = [2, 9, 8, 7, 6, 3, 4]; //Números por los quese multiplica la CI
 
 //Verifica cuál de los dos formularios se está enviando
 if (isset($_POST['verificarCI'])) {
-    $verificadorCI = (int) $_POST['ci'];
+    $verificadorCI = $_POST['ci'];
 
     $verificadorCI = verifCI($verificadorCI, $multipliEach);
 } else if (isset($_POST['generarDV'])) {
-    $ciIngresada = (int) $_POST['ci7'];
+    $ciIngresada = $_POST['ci7'];
     $digVerificador = crearDigitoVerif($ciIngresada, $multipliEach);
 }
 
