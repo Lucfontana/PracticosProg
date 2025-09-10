@@ -17,6 +17,7 @@
         </ul>
     </nav>
 
+     <a href="/lab6/index.html" class="back-btn">⬅ Volver al inicio</a>
 
     <main>
         <section id="tablas">
@@ -78,7 +79,12 @@
 
         </section>
 
-        <main>
+            </main>
+    <footer>
+        <p>© Laboratorios de Programación</p>
+    </footer>
 </body>
+
+
 
 </html>

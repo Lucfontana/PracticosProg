@@ -1,29 +1,18 @@
 <?php
-// I
-// M
-// P
-// O
-// R
-// T
-// A
-// N
-// T
-// E
-
-// CORREGIR: HACER QUE DEVUELVA RESULTADO CUANDO NO HAYA RAIZ DE NUMERO NEGAIVO
 
 /* Calculo de baskara */
 
+// Se establecen como null para en caso de devolver un error solo se muestre el mensaje de error.
 $mensajeA = null;
 $mensajeB = null;
 
-if ($_POST['bhaskara']) {
+if (isset($_POST['bhaskara'])) {
 $datoa = (int)$_POST['numA'];
 $datob = (int)$_POST['numB'];
 $datoc = (int)$_POST['numC'];
 
     if ($datoa == 0) {
-        $mensajeA = "Error; no es una ecuación cuadratica ya que a = 0";
+        $mensajeA = "Error; no es una ecuación de segundo grado a ya que a = 0";
     } else if (multiplicacion($datoa, $datob, $datoc) < 0) {
         $mensajeA = "Error; No hay raiz de numero negativo";
     } else {

@@ -17,6 +17,7 @@
         </ul>
     </nav>
 
+    <a href="/lab6/index.html" class="back-btn">⬅ Volver al inicio</a>
 
     <main>
         <section id="calculos-sencillos">
@@ -41,7 +42,7 @@
 
             </form>
             <?php if (isset($resultado)): ?>
-                <div class="resultado">Resultado de la operacion: <?= $resultado ?></div>
+                <div class="resultado"> <?= $resultado ?></div>
             <?php endif; ?>
 
         </section>
@@ -122,7 +123,11 @@
                 <?php endif; ?>
             </form>
         </section>
-        <main>
+                </main>
 </body>
+
+ <footer>
+        <p>© Laboratorios de Programación</p>
+    </footer>
 
 </html>
