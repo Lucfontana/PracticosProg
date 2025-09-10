@@ -6,7 +6,7 @@
 $mensajeA = null;
 $mensajeB = null;
 
-if ($_POST['bhaskara']) {
+if (isset($_POST['bhaskara'])) {
 $datoa = (int)$_POST['numA'];
 $datob = (int)$_POST['numB'];
 $datoc = (int)$_POST['numC'];
