@@ -1,19 +1,8 @@
 <?php
-// I
-// M
-// P
-// O
-// R
-// T
-// A
-// N
-// T
-// E
-
-// CORREGIR: HACER QUE DEVUELVA RESULTADO CUANDO NO HAYA RAIZ DE NUMERO NEGAIVO
 
 /* Calculo de baskara */
 
+// Se establecen como null para en caso de devolver un error solo se muestre el mensaje de error.
 $mensajeA = null;
 $mensajeB = null;
 
