@@ -33,7 +33,8 @@ if (isset($_POST['numeroTabla'])) {
         $resultado10 = $numerodeTabla."*10 = ".tablas($numerodeTabla)[9]."<br>";
     }
 
-} else if (isset($_POST['adivina5oro'])) {
+} 
+else if (isset($_POST['adivina5oro'])) {
     $oro = (int) $_POST['5oro'];
     if ($oro > Porcentaje()) {
         $OroPorcentaje = "Error; Demasiadas veces jugadas";
@@ -43,7 +44,8 @@ if (isset($_POST['numeroTabla'])) {
         $OroPorcentaje = "Tus posibilidades son de ".Posibilidades($oro)." entre ".Porcentaje()."<br>";
         $OroPorcentajePorcentaje = "Lo que es igual a: ".PorcentajePorcentaje($oro)."%";
     }
-} else if (isset($_POST['factorial'])) {
+} 
+else if (isset($_POST['factorial'])) {
     $numeroFactorial = (int) $_POST['numeroFactorial'];
     if ($numeroFactorial < 1) {
         $factorial = "Error; El número ingresado debe ser positivo";
