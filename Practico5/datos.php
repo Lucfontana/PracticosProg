@@ -1,5 +1,15 @@
 <?php
 
+$promedio = null;
+$situacion = null;
+$notas = [];
+$nombre = null;
+$cedula = null;
+$localidad = null;
+$direccion = null;
+$telefono = null;
+$email = null;
+
 include ('../Lab4/funciones_cedula.php');
 $multipliEach = [2, 9, 8, 7, 6, 3, 4];
 
