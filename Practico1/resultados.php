@@ -16,7 +16,7 @@ $datoc = (int)$_POST['numC'];
     } else if (multiplicacion($datoa, $datob, $datoc) < 0) {
         $mensajeA = "Error; No hay raiz de numero negativo";
     } else {
-        $datoRaiz = sqrt(multiplicacion($datoa, $datob, $datoc));
+        $datoRaiz = sqrt(multiplicacion($datoa, $datob, $datoc)); //funcion calcula raiz cuadrada
         $datofinalA = division(diviSuma($datob, $datoRaiz), diviMultiplicacion($datoa));
         $datofinalB = division(diviResta($datob, $datoRaiz), diviMultiplicacion($datoa));
         $mensajeA = "Resultado primera x: ".$datofinalA;
@@ -46,7 +46,7 @@ function division($dato1, $dato2) {
 
 
 
-require("ingreso_formulario.php")
+require("ingreso_formulario.php");
 
 
 ?>

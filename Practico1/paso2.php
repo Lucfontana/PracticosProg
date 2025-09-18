@@ -19,7 +19,7 @@ function areaTriangulo($base, $altura){
 }
 
 function areaCircunferencia($radio){
-    return pi() * ($radio * 2);
+    return pi() * ($radio * $radio);
 }
 
 
