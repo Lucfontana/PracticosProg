@@ -8,12 +8,12 @@ $multipliEach = [2,9,8,7,6,3,4];
 function verifCI($CI, $multiEach)
 {
     $digitoVerif = 0;
-    $arrayCI = str_split($CI); //Se divide la CI en numeros independientes y se guarda en un arreglo
+    $arrayCI = str_split($CI); //Se divide la CI en numeros independientes (string) y se guarda en un arreglo
 
     if ($arrayCI[0] === "0"){
         return "Su CI no puede comenzar con un 0";
-    } else if (strlen($CI) != 8) {
-        return 'La CI ingresada debe ser de 8 carácteres';
+    } else if (strlen($CI) != 8) { //contar la cantidad de caracteres de un string
+        return 'La CI ingresada debe ser de 8 carácteres'; 
     } else {
         $digitoVerif = mostrarDigVerificador($CI, $multiEach);
         if ($digitoVerif == $arrayCI[7]) { //Se compara el digito verificador con el último numero de la ci

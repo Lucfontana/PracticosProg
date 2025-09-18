@@ -1,6 +1,7 @@
 <?php
 
 include ('../Lab4/funciones_cedula.php');
+$multipliEach = [2, 9, 8, 7, 6, 3, 4];
 
 // Funciones
 function calcularPromedio($notas) {
@@ -16,7 +17,7 @@ function obtenerSituacion($promedio) {
         return "Examen Febrero";
     }
 }
- 
+
 
 
 // Procesar los datos
@@ -48,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p><strong>Situación Académica:</strong> $situacion</p>";
     } else if ($cedula === "Tu cédula NO existe"){
         echo "<p style='color: red;'><strong>Error:</strong> La cédula ingresada no es válida.</p>";
-    }
+}
 }
 
 ?>

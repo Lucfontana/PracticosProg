@@ -23,7 +23,7 @@
             <form action="conversiones_datos.php" method="post">
                 <h1>Conversiones de bases</h1>
                 <label for="num">Número a convertir:
-                    <input type="string" name="num" placeholder="Ingrese el número a convertir" maxlength="8" required>
+                    <input type="text" name="num" placeholder="Ingrese el número a convertir" maxlength="8" required>
                 </label>
                 <label for="desde">Base de origen:
                     <select name="desde" id="desde">

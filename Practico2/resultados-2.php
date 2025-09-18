@@ -21,7 +21,7 @@ if (isset($_POST['numeroTabla'])) {
     if ($numerodeTabla > 10 || $numerodeTabla < 1) {
         $resultado1 = "Error; Debes un número entre 1 y 10";
     } else {
-        $resultado1 = $numerodeTabla."*1 = ".tablas($numerodeTabla)[0]."<br>";
+        $resultado1 = $numerodeTabla."*1 = ".tablas($numerodeTabla)[0]."<br>"; // arreglo
         $resultado2 = $numerodeTabla."*2 = ".tablas($numerodeTabla)[1]."<br>";
         $resultado3 = $numerodeTabla."*3 = ".tablas($numerodeTabla)[2]."<br>";
         $resultado4 = $numerodeTabla."*4 = ".tablas($numerodeTabla)[3]."<br>";
@@ -72,7 +72,7 @@ function Porcentaje() {
 }
 
 function PorcentajePorcentaje($oro) {
-    return (posibilidades($oro)/Porcentaje())*100;
+    return (Posibilidades($oro)/Porcentaje())*100;
 }
 
 // Funciones de Factorial

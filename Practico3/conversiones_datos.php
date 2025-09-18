@@ -53,11 +53,11 @@ if (isset(($_POST['Calcular']))) {
         if (is_int(Calculadora($num1_convertido, $num2_convertido, $operacion))) {
             $num_convertir = Calculadora($num1_convertido, $num2_convertido, $operacion);
             $resultado = "Resultado Decimal: ".$num_convertir;
-            $resultado2 = "Reultado Binario: ".base_convert($num_convertir, 10, 2);
-            $resultado3 = "Reultado Octal: ".base_convert($num_convertir, 10, 8);
-            $resultado4 = "Reultado Hexadecimal: ".base_convert($num_convertir, 10, 16);
+            $resultado2 = "Resultado Binario: ".base_convert($num_convertir, 10, 2);
+            $resultado3 = "Resultado Octal: ".base_convert($num_convertir, 10, 8);
+            $resultado4 = "Resultado Hexadecimal: ".base_convert($num_convertir, 10, 16);
         } else {
-            $resultado = "El resultado de la opercion es un numero con coma y no se puede cambiar de base";
+            $resultado = "El resultado de la operacion es un numero con coma y no se puede cambiar de base";
         }
     }
     require("index.php");
