@@ -1,3 +1,9 @@
+<?php
+
+include_once 'datos.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +24,8 @@
 
     <a href="/lab6/index.html" class="back-btn">⬅ Volver al inicio</a>
     <main>
-        <section id="InfoPersonal">
-            <form action="datos.php" method="post">
+        <form action="" method="post">
+            <section id="InfoPersonal">
                 <h1>Información Personal</h1>
                 <label>Nombre Completo:
                     <input type="text" placeholder="Nombre Completo" name="nombre" maxlength="50" required>
@@ -74,9 +80,16 @@
                     <input type="number" placeholder="Nota" name="notas[]" min="1" max="12" required>
                 </label>
 
-                <button type="submit" value="Calcular Promedio" name="calcularPromedio">Calcular Promedio</button>
-            </form>
+                <input type="submit" value="Calcular Promedio" name="calcularPromedio">Calcular Promedio</input>
+
+                <?php if ($cedula === "Tu cédula si existe"):?> 
+                    <?php mostrarFichaEstudiante($nombre, $cedula, $localidad, $direccion, $telefono, $email, $notas, $promedio, $situacion); ?>
+                <?php elseif ($cedula === "Tu cédula NO existe"): ?>
+                    <?php mostrarErrorCedula(); ?>
+                <?php endif; ?>
+            
         </section>
+        </form>
     </main>
 </body>
 </html>

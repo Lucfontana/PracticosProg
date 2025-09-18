@@ -1,4 +1,5 @@
 <?php
+include_once '../Lab4/funciones_cedula.php';
 
 $promedio = null;
 $situacion = null;
@@ -10,7 +11,6 @@ $direccion = null;
 $telefono = null;
 $email = null;
 
-include ('../Lab4/funciones_cedula.php');
 $multipliEach = [2, 9, 8, 7, 6, 3, 4];
 
 // Funciones
@@ -44,9 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $situacion = obtenerSituacion($promedio);
     $cedula = verifCI($cedula, $multipliEach);
 
-    if ($cedula === "Tu cédula si existe"){
+}
 
-
+function mostrarFichaEstudiante($nombre, $cedula, $localidad, $direccion, $telefono, $email, $notas, $promedio, $situacion) {
     echo "<h2>Ficha del Estudiante</h2>";
     echo "<p><strong>Nombre:</strong> $nombre</p>";
     echo "<p><strong>Cédula:</strong> $cedula</p>";
@@ -57,9 +57,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p><strong>Notas:</strong> " . implode(", ", $notas) . "</p>";
     echo "<p><strong>Promedio:</strong> " . number_format($promedio, 2) . "</p>";
     echo "<p><strong>Situación Académica:</strong> $situacion</p>";
-    } else if ($cedula === "Tu cédula NO existe"){
-        echo "<p style='color: red;'><strong>Error:</strong> La cédula ingresada no es válida.</p>";
+
 }
+
+function mostrarErrorCedula() {
+    echo "<p style='color: red;'><strong>Error:</strong> La cédula ingresada no es válida.</p>";
 }
+
 
 ?>
