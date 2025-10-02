@@ -16,7 +16,6 @@ $datoc = (int)$_POST['numC'];
     } else if (multiplicacion($datoa, $datob, $datoc) < 0) {
         $mensajeA = "Error; No hay raiz de numero negativo";
     } else {
-        $datoRaiz = sqrt(multiplicacion($datoa, $datob, $datoc)); //funcion calcula raiz cuadrada
         $datoRaiz = sqrt(multiplicacion($datoa, $datob, $datoc)); // funcion calculadora de raiz cuadrada
         $datofinalA = division(diviSuma($datob, $datoRaiz), diviMultiplicacion($datoa));
         $datofinalB = division(diviResta($datob, $datoRaiz), diviMultiplicacion($datoa));
