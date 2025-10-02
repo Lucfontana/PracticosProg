@@ -55,9 +55,9 @@
                     <input type="number" name="num1" placeholder="Ingrese medida del lado">
                 </label>
                 <input type="submit" value="Enviar" name="enviarCuadrado">
-            <?php if (isset($areaCuad)): ?>
-                <div class="resultado">Resultado: <?= $areaCuad ?></div>
-            <?php endif; ?>
+                <?php if (isset($areaCuad)): ?>
+                    <div class="resultado">Resultado: <?= $areaCuad ?></div>
+                <?php endif; ?>
             </form>
 
             <form action="paso2.php" method="post">
