@@ -20,31 +20,28 @@
      <a href="/lab6/index.html" class="back-btn">⬅ Volver al inicio</a>
 
     <main>
-        <section id="tablas">
-            <form action="resultados-2.php" method="post">
-                <h1>Tablas de Multiplicar</h1>
-                <label for="num1">Elige un Número:
-                    <input type="number" name="numero" placeholder="Ingrese el número" required>
-                </label>
-                <input type="submit" value="Generar" name="numeroTabla">
-
-            </form>
-            <?php if (isset($resultado1)): ?>
-                <div class="resultado">
-                    <?= $resultado1 ?>
-                    <?= $resultado2 ?>
-                    <?= $resultado3 ?>
-                    <?= $resultado4 ?>
-                    <?= $resultado5 ?>
-                    <?= $resultado6 ?>
-                    <?= $resultado7 ?>
-                    <?= $resultado8 ?>
-                    <?= $resultado9 ?>
-                    <?= $resultado10 ?>
-                </div>
+<section id="tablas">
+    <form action="resultados-2.php" method="post">
+        <h1>Tablas de Multiplicar</h1>
+        <label for="numero">Elige un Número:
+            <input type="number" name="numero" placeholder="Ingrese el número" required>
+        </label>
+        <input type="submit" value="Generar" name="numeroTabla">
+    </form>
+    
+    <?php if (isset($resultado)): ?>
+        <div class="resultado">
+            <?php if (is_array($resultado)): ?>
+                <?php foreach ($resultado as $linea): ?>
+                    <p><?= $linea ?></p>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <!-- Si -->
+                <p><?= $resultado ?></p>
             <?php endif; ?>
-
-        </section>
+        </div>
+    <?php endif; ?>
+</section>
 
 
         <section id="5oro">
