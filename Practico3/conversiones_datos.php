@@ -46,9 +46,10 @@ if (isset(($_POST['Calcular']))) {
         $resultado = "No puedes ingresar numeros con coma";
     } else if ($operacion == null) {
         $resultado = "Ingresa una operacion";
-    } else {
+    } else { 
+        //se pasan los numeros a decimales
         $num1_convertido = base_convert($num1, $base1, $base_convertir);
-        $num2_convertido = base_convert($num2, $base2, $base_convertir);
+        $num2_convertido = base_convert($num2, $base2, $base_convertir);    
 
         if (is_int(Calculadora($num1_convertido, $num2_convertido, $operacion))) {
             $num_convertir = Calculadora($num1_convertido, $num2_convertido, $operacion);
