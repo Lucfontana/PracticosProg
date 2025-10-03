@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function mostrarFichaEstudiante($nombre, $cedula, $localidad, $direccion, $telefono, $email, $notas, $promedio, $situacion) {
-    echo "<h2>Ficha del Estudiante</h2>";
+    echo "<h2><br>Ficha del Estudiante</h2><br>";
     echo "<p><strong>Nombre:</strong> $nombre</p>";
     echo "<p><strong>Cédula:</strong> $cedula</p>";
     echo "<p><strong>Localidad:</strong> $localidad</p>";

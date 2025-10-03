@@ -53,9 +53,7 @@
                 <input type="submit" value="Calcular" name="adivina5oro">
             <?php if (isset($OroPorcentaje)): ?>
                 <div class="resultado">
-                    <?= $OroPorcentaje ?>
-                    <?= $OroPorcentajePorcentaje ?>
- 
+                    <?= $OroPorcentaje ?> 
                 </div>
             <?php endif; ?>
             </form>
